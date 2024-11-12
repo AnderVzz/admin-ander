@@ -1,6 +1,6 @@
 # Función que suma dos números
 def suma(a, b):
-    return a + b
+    return a + b + 500
 
 # Variables con dos números (puedes elegir cualquier valor)
 numero1 = 10
