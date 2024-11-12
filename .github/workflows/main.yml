@@ -2,6 +2,9 @@ name: Primer workflow
 
 on: push
 
+permissions:
+  security-events: write
+  
 jobs: 
   hola_mundo:
     runs-on: ubuntu-latest
@@ -15,3 +18,7 @@ jobs:
         run: docker build -t AnderVzz/holamundo .
       - name: Probar contenedor 
         run: docker run AnderVzz/holamundo .
+      - name: Run Pylint analysis
+        uses: advanced-security/python-lint-code-scanning-action@v1
+        with:
+          linter: pylint
