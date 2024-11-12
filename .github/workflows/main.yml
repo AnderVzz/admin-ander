@@ -1,6 +1,9 @@
 name: Primer workflow
 
-on: push
+on: 
+  push:
+    branches:
+      - nuevafeature
 
 permissions:
   security-events: write
