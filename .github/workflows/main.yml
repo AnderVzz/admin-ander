@@ -3,9 +3,13 @@ name: Primer workflow
 on: push
 
 jobs: 
-  hola_mundo
+  hola_mundo:
     runs-on: ubuntu-latest
 
     steps:
       - name: Mostrar mensaje
         run: echo "Hola GH actions"
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+      - name: Probar codigo
+        run: python3 main.py
